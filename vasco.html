@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Vasco DIGIPASS SecureClick manager</title>
+	<script src="jquery.min.js"></script>
+	<link href="bootstrap.min.css" rel="stylesheet">
+  	<script src="bootstrap.min.js"></script>
+  	<script src="bootbox.min.js"></script>
+  	<script src="angular.min.js"></script>
+  	<link rel="stylesheet" href="styles.css" />
+  	<script src="zip.js"></script>
+  	<script src="z-worker.js"></script>
+  	<script src="deflate.js"></script>
+  	<script src="inflate.js"></script>
+  	<script src="app.js"></script>
+</head>
+<body ng-controller="MainCtrl as vm">
+
+<div class="container"  max-width: 480px;>
+		<div class="titleheader">		<!-- The place to set Logo/info buttons Close and advanced mode-->
+			<div class="titleheader_pic_left">
+				<img class="titleheader_pic" src="Images/vasco_title.png">
+			</div>					<!-- Vasco Logo -->
+			<div class="titleheader_pic_right">
+				<img class="titleheader_pic" id="DongleInfo" src="Images/dp_bb_persp.png" ng-class="{'avoid-clicks':vm.disableDivs}" ng-mouseenter="vm.hoverDiv('DongleInfo')" ng-mouseleave="vm.mouseleave('DongleInfo')" ng-click="vm.clickDiv('checkVersionDongle') " ng-hide="vm.disableDivs">	<!-- Get the DPBB version string -->
+				<img class="titleheader_pic" id="BLEDeviceInfo" src="Images/ble_dev_persp.png" ng-class="{'avoid-clicks':vm.disableDivs}" ng-mouseenter="vm.hoverDiv('BLEDeviceInfo')" ng-mouseleave="vm.mouseleave('BLEDeviceInfo')" ng-click="vm.clickDiv('checkVersionFIDO')" ng-hide="vm.disableDivs">	<!-- Get the SecureClick info -->
+				<img class="titleheader_pic_small" id="changeUImode" src="Images/adv_plus.png" ng-click="vm.clickDiv('ChangeUImode')" ></td>	<!--ng-class="{'avoid-clicks':vm.disableDivs}"-->
+			</div>					<!-- Advanced/basic mode -->
+		</div>
+		<div class="title" class="titleheader_pic_right">
+			<h2><font color="#08426B" id="title" style="padding-left: 15px;">DIGIPASS&reg; SecureClick Manager</font></h2>
+		</div>
+		<hr>
+		<div class="basicFunctions" id="basicFunctions" style="max-width: 480px;">		
+			<div class="function_left" ng-class="{'avoid-clicks':vm.disableDivs}" ng-mouseenter="vm.hoverDiv('add_New_Bond')" ng-mouseleave="vm.mouseleave('add_New_Bond')" ng-click="vm.clickDiv('addNewBond')">
+				<img class="function_left" id="addSecureClick" class="function_left" style="padding-left: 47px;" src="Images/add_ble_dev.png" ng-hide="(vm.addNewBond || vm.disableDivs)">
+				<br>
+				<label id="Add_ble_dev_label" style="padding-left: 40px; padding-top: 10px; color: #08426B" ng-hide="(vm.disableDivs)">Add SecureClick</label>
+			</div>
+			<div class="function_right" ng-class="{'avoid-clicks':vm.disableDivs}" ng-mouseenter="vm.hoverDiv('Erase_ble_dev_pairings')" ng-mouseleave="vm.mouseleave('Erase_ble_dev_pairings')" ng-click="vm.clickDiv('eraseBondFIDO')">
+				<img class="function_right" style="padding-left: 60px;" class="basic_img" src="Images/erase_ble_dev_pairings.png" ng-hide="(vm.eraseBondFIDO || vm.disableDivs)">
+				<br>
+				<label id="Erase_ble_dev_pairings_label" style="padding-left: 75px; color: #08426B" ng-hide="(vm.disableDivs)">Remove SecureClick pairings</label>
+			</div>
+
+		</div>
+		<div class="advancedFunctions" id="advancedFunctions" style="max-width: 480px;">
+			<div class="function_left" ng-class="{'avoid-clicks':vm.disableDivs}" ng-mouseenter="vm.hoverDiv('firmware_update')" ng-mouseleave="vm.mouseleave('firmware_update')" ng-click="vm.clickDiv('firmwareUpdate')">
+				<img id="DPBBupdate" style="padding-left: 42px;" class="function_left" src="Images/firmware_update.png" ng-hide="(vm.firmwareUpdate || vm.disableDivs)">
+				<br>
+				<label id="firmware_update_label" height="0px" style="visibility: hidden; padding-left: 35px; padding-top: 15px; color: #08426B" ng-hide="( vm.disableDivs)">Firmware update</label>
+			</div>
+			<div class="function_right" ng-class="{'avoid-clicks':vm.disableDivs}" ng-mouseenter="vm.hoverDiv('erase_dpbb_pairings')" ng-mouseleave="vm.mouseleave('erase_dpbb_pairings')" ng-click="vm.clickDiv('eraseBondDongle')">
+				<!--<input class="fileUpload" type="file" accept="application/zip" id="DPGOfileUploadCtrl"/>-->
+				<img id="eraseBondDongle" class="function_right" style="padding-left: 47px;" src="Images/erase_dp_bb_pairings.png" ng-hide="(vm.eraseBondDongle || vm.disableDivs)">
+				<br>
+				<label id="erase_dpbb_pairings_label" height="0px" style="visibility: hidden; padding-left: 57px; padding-top: 5px; color: #08426B" ng-hide="( vm.disableDivs)">Remove Bluetooth Bridge pairings</label>
+			</div>
+		</div>
+		<div class="feedback" id="feedback" style="max-width: 480px;">
+			<div  class="feedback" id="feedback_div" ng-class="vm.outputColor" id="outputDiv" ng-show="vm.showOutputMessage || vm.constantMsg"><label id="outputTxt" style="font-size: 20px" ng-bind-html='vm.outputMessage'></label>
+			<br>
+			<img  id="feedback_picture" ng-show="vm.showOutputMessage || vm.constantMsg" src="">
+				</div>	
+		</div>
+		<div class="update" id="update" style="height: 0px; max-width: 480px;">
+			<div ng-class="{'avoid-clicks':vm.disableDivs}" ng-mouseenter="vm.hoverDiv('updateVersionDongle')" ng-mouseleave="vm.mouseleave('updateVersionDongle')" ng-click="vm.clickDiv('updateVersionDongle')">
+				<label for="fileUploadCtrl"  style="float: left;" id="fileUploadCtrlDongle">
+						<img src="Images/dp_bb_firmw_upd.png" id="updateVersionDongle" style="padding-left: 20px;">
+						<br>
+						<label for="fileUploadCtrl" id="updateVersionDongle_label" style="visibility:hidden; padding-left: 30px; color: #08426B;  height: 0px;" >Update Dongle firmware</label>
+				</label>				
+				<input class="fileUpload" style="visibility: hidden;" type="file" accept=".bin" id="fileUploadCtrl" />
+			</div>
+			<div ng-class="{'avoid-clicks':vm.disableDivs}" ng-mouseenter="vm.hoverDiv('updateVersionFIDO')" ng-mouseleave="vm.mouseleave('updateVersionFIDO')" ng-click="vm.clickDiv('updateVersionFIDO')">
+				<label for="DPGOfileUploadCtrl" style="float: right;" id="fileUploadCtrlBleDev">
+						<img src="Images/ble_dev_firmw_upd.png" id="updateVersionFIDO">
+						<br>
+						<label for="DPGOfileUploadCtrl" id="updateVersionFIDO_label" style="visibility: hidden; padding-top: 3px; color: #08426B; height: 0px;" >Update SecureClick firmware</label>						
+				</label>
+				<input class="fileUpload" style="visibility: hidden;" type="file" accept="application/zip" id="DPGOfileUploadCtrl"/>
+			</div>
+		</div>	
+		<br>
+		<hr>
+		<div class="footer" style="max-width: 480px;">
+				<div style="float: left; padding-left: 20px;">
+					<img class="footer_small" src="Images/info_icon.png" ng-click="vm.clickDiv('ApplicationInfo')">
+				</div>
+				<div style="float: right;">
+					<img class="footer_big" style="padding-right: 20px" src="Images/Bluetooth_Smart_Logo.svg.png">
+					<img class="footer_big" src="Images/fido_u2f_cert.png">
+					<!--<a href="https://www.bluetooth.com/" target="_blank"><img class="footer_big" style="padding-right: 20px" src="Images/Bluetooth_Smart_Logo.svg.png"></a>-->
+					<!--<a href="https://fidoalliance.org/" target="_blank"><img class="footer_big" src="Images/fido_u2f_cert.png"></a>-->
+				</div>
+		</div>
+	
+</div>
+</body>
+</html>

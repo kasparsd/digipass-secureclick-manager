@@ -1,0 +1,275 @@
+{
+  "appName": {
+    "message": "DIGIPASS SecureClick Manager",
+    "description": "The title of the application, displayed in the web store."
+  },
+  "appDesc": {
+    "message": "Manage your DIGIPASS Bluetooth Bridge and SecureClick", 
+    "description":"The description of the application, displayed in the web store."
+  },
+  
+    "htmlTitle": {
+    "message": "DIGIPASS&reg; SecureClick Manager",
+    "description": "The title of the application in html format."
+  },
+  
+  "Add_ble_dev_label": {
+    "message": "Add SecureClick", 
+    "description":""
+  },
+    "Erase_ble_dev_pairings_label": {
+    "message": "Remove SecureClick pairings", 
+    "description":""
+  },
+    "firmware_update_label": {
+    "message": "Firmware update", 
+    "description":""
+  },
+    "erase_dpbb_pairings_label": {
+    "message": "Remove Bluetooth Bridge pairings", 
+    "description":""
+  },
+  "updateVersionDongle_label": {
+    "message": "Update Dongle firmware", 
+    "description":""
+  },
+  "updateVersionFIDO_label": {
+    "message": "Update SecureClick firmware", 
+    "description":""
+  },
+ 
+  "BLE_BatteryLevelFeedback": {
+	"message": "DIGIPASS SecureClick battery level: ",
+	"description": ""
+  },
+  "BLE_FirmFeedback": {
+	"message": "DIGIPASS SecureClick firmware version: ",
+	"description": ""
+  },
+  "BLE_AppletFeedback": {
+	"message": "DIGIPASS SecureClick applet version: ",
+	"description": ""
+  },
+  "PinRequest":{
+	"message": "Enter pin?",
+	"description": "Pin request"
+  },  
+  "BRIDGE_Update_Feedback": {
+	"message": "DIGIPASS Bluetooth Bridge firmware was successfully updated!<br/>New version is: ",
+	"description": ""
+  },
+  "BRIDGE_Version_Feedback": {
+	"message": "DIGIPASS Bluetooth Bridge firmware version: ",
+	"description": ""
+  },
+  "BRIDGE_Version_Progress": {
+	"message": "Requesting DIGIPASS Bluetooth Bridge firmware version...",
+	"description": ""
+  },
+  "BRIDGE_bond_remove_Feedback": {
+	"message": "All DIGIPASS Bluetooth Bridge connections are removed!",
+	"description": ""
+  },
+  "BLE_bond_remove_Feedback": {
+	"message": "All DIGIPASS SecureClick connections are removed!",
+	"description": ""
+  },
+  "BLE_send_update_cmd": {
+	"message": "Send update command",
+	"description": ""
+  },
+  "BLE_start_update_cmd": {
+	"message": "Starting firmware update",
+	"description": ""
+  },
+  "BRIDGE_Error_Pairing": {
+	"message": "There is no Bluetooth Bridge connected or the DIGIPASS SecureClick is not in pairing mode.",
+	"description": ""
+  },
+  "BRIDGE_Error_Request": {
+	"message": "There is no DIGIPASS Bluetooth Bridge connected or the DIGIPASS SecureClick is not in range of the DIGIPASS  Bluetooth Bridge. Be sure the DIGIPASS SecureClick is paired with the DIGIPASS Bluetooth Bridge.",
+	"description": ""
+  },
+  "BRIDGE_Error_Connection": {
+	"message": "There is no DIGIPASS Bluetooth Bridge connected or the DIGIPASS SecureClick is not turned on or in range of the DIGIPASS Bluetooth Bridge.",
+	"description": ""
+  },
+  "BRIDGE_Lost_Connection": {
+	"message": "Lost connection.<br>Please retry",
+	"description": ""
+  },
+  "BLE_Remove_pairings_cmd": {
+	"message": "Remove DIGIPASS SecureClick connection.<br>Short press on DIGIPASS SecureClick",
+	"description": ""
+  },
+    "BLE_Remove_pairings_progress": {
+	"message": "Removing DIGIPASS Bluetooth Bridge connections.",
+	"description": ""
+  },
+  "BLE_info_request": {
+	"message": "Requesting DIGIPASS SecureClick info.<br> Short press on SecureClick",
+	"description": ""
+  },
+    "BLE_pairing_request": {
+	"message": "Pair with DIGIPASS SecureClick.<br>Long press on SecureClick",
+	"description": ""
+  },
+  "BLE_connection_progress": {
+	"message": "Trying to connect to the DIGIPASS Bluetooth Bridge.",
+	"description": ""
+  },
+  "BRIDGE_waiting": {
+	"message": "Waiting for DIGIPASS Bluetooth Bridge to respond.",
+	"description": ""
+  },
+  "BLE_Adding_Succes": {
+	"message": "Successfully added new DIGIPASS SecureClick!",
+	"description": ""
+  },
+    "BLE_Already_Paired": {
+	"message": "FIDO authenticator you wanted to pair is already paired with the DIGIPASS Bluetooth Bridge",
+	"description": ""
+  },
+  "DONGLE_to_much_bonds": {
+	"message": "All Bluetooth Bridge bonds are taken.",
+	"description": ""
+  }, 
+  "BLE_Adding_bond_Progress": {
+	"message": "The DIGIPASS Bluetooth Bridge has found a new FIDO authenticator and is currently adding it to its pairing list",
+	"description": ""
+  },
+  "BRIDGE_Send_Pin": {
+	"message": "Send pairing pin",
+	"description": ""
+  },
+  "BRIDGE_Show_Pin": {
+	"message": "Pairing code is ",
+	"description": ""
+  },
+  "BRIDGE_Failed_Pairing": {
+	"message": "Pairing failed.",
+	"description": ""
+  },
+  "BRIDGE_Wrong_Pin": {
+	"message": "Wrong pin.",
+	"description": ""
+  },
+  "BLE_Timeout": {
+	"message": "A timeout occured.",
+	"description": ""
+  },
+  "BLE_Unknown_Error": {
+	"message": "Unknown error...",
+	"description": ""
+  },
+  "BRIDGE_connected": {
+	"message": "DIGIPASS Bluetooth Bridge connected.",
+	"description": ""
+  }, 
+  "BRIDGE_Start_Update": {
+	"message": "Starting DIGIPASS Bluetooth Bridge firmware update...",
+	"description": ""
+  }, 
+  "BRIDGE_Update_Progress": {
+	"message": "Updating DIGIPASS Bluetooth Bridge firmware <br>",
+	"description": ""
+  },
+  "BLE_Update_Progress": {
+	"message": "Updating firmware to DIGIPASS SecureClick - (",
+	"description": ""
+  }, 
+  "BLE_Update_Success": {
+	"message": "Activate image and reset. <br/> Update succeeded. <br/>",
+	"description": ""
+  },
+  "BLE_Validity_Check": {
+	"message": "Firmware validity check.",
+	"description": ""
+  }, 
+  "BLE_Activate_Firmware": {
+	"message": "Activating new firmware.",
+	"description": ""
+  },
+  "BLE_Update_Request": {
+	"message": "Update the DIGIPASS SecureClick firmware.<br>Short press on DIGIPASS  SecureClick",
+	"description": ""
+  },
+  "BLE_Connection_Progress": {
+	"message": "Found a DIGIPASS SecureClick, trying to connect...",
+	"description": ""
+  },
+  "BLE_Firmware_Start_Progress": {
+	"message": "Initializing the DIGIPASS SecureClick to transfer the data (about 30 sec)",
+	"description": ""
+  },
+  "BLE_Lost_Connection": {
+	"message": "Lost connection, retry.",
+	"description": ""
+  },
+  "BRIDGE_To_Many_Feedback": {
+	"message": "Please just insert one DIGIPASS Bluetooth Bridge.",
+	"description": ""
+  },
+  "BRIDGE_Select_File": {
+	"message": "Select the update file.",
+	"description": ""
+  },
+  "BLE_Check_Sign": {
+	"message": "Check the firmware signature (about 30 sec)",
+	"description": ""
+  },
+  "BLE_Waiting": {
+	"message": "Waiting for DIGIPASS SecureClick",
+	"description": ""
+  },
+  "BLE_Firmware_Progress": {
+	"message": "Send firmware to DIGIPASS SecureClick - ",
+	"description": ""
+  },
+  "BRIDGE_Insert_Request": {
+	"message": "Please insert a DIGIPASS Bluetooth Bridge",
+	"description": ""
+  },
+  "BRIDGE_Remove_Pairing_Request": {
+	"message": "Are you sure you want to remove the DIGIPASS Bluetooth Bridge pairings?",
+	"description": ""
+  },
+  "BLE_Remove_Pairing_Request": {
+	"message": "Are you sure you want to remove the DIGIPASS SecureClick connections?",
+	"description": ""
+  },
+  "BRIDGE_RSSI": {
+	"message": "The RSSI of SecureClick:<br/>",
+	"description": ""
+  },
+  "BLE_RSSI": {
+	"message": "The RSSI of SecureClick:<br/>",
+	"description": ""
+  },
+  "BLE_RSSI_Request": {
+	"message": "Requesting RSSI from DIGIPASS SecureClick.<br>Short press on SecureClick",
+	"description": ""
+  },
+  "BLE_RSSI_Progress": {
+	"message": "Requesting RSSI from SecureClick...",
+	"description": ""
+  },
+  "BRIDGE_RSSI_REQUEST": {
+	"message": "Testing Bluetooth link.<br>Short press on SecureClick",
+	"description": ""
+  },
+  "User_Manual": {
+	"message" : "https://www.vasco.com/images/DP-SecureClick-User-Manual-v9_tcm42-54919.pdf",
+	"description": "link to SecureClick User Manual"
+  },
+  "License_Agreement": {
+	"message" : "https://www.vasco.com/images/EULAlicense_tcm42-54911.pdf",
+	"description": "Link to end user license agreement"
+  },
+    "Copyright": {
+	"message" : "&copy VASCO Data Security, Inc., VASCO Data Security International GmbH., All rights reserved",
+	"description": "Copyright notice"
+  }
+  
+}
+

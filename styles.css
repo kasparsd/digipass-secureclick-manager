@@ -1,0 +1,182 @@
+body{
+	font-family: sans-serif;
+}
+
+.container {
+	margin-top: 0.5%;
+}
+
+table{
+	border-spacing: 2px;
+}
+td {
+    padding-bottom: 2px;
+}
+
+thead tr {
+  border-bottom: 2px solid white;
+}
+
+.footnote{
+	padding: 5px 0px 0px 8px;
+	font-weight: lighter;
+}
+
+.center-space{
+	padding-right: 2px;
+}
+h3{
+	margin: 10px 0 10px 0;
+	font-weight: lighter;
+}
+
+.hover{
+	text-align: left;
+}
+.ng-hide {
+  display: none !important;
+}
+.ng-hide-add-active, .ng-hide-remove {
+  display: block!important;
+}
+#outputDiv{
+  padding: 8px 5px 0px 8px;
+ }
+
+ .smallFont{
+ 	font-size: small;
+ }
+ input[type=file]::-webkit-file-upload-button {
+  margin: 0px;
+  font-size: 12pt;
+  padding: 4px;
+  border: solid 1px #AACFE4;
+  width: 209px;
+  height: 31px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+input[type=file] {
+  color: transparent;
+  font-size: 12pt;
+}
+
+.fileUpload{
+  width:100%;
+  display: none!important;
+}
+
+#exit{
+	height: 130px;
+	width: 230px;
+	/*background-color: #ff661a;*/
+	color: #fff;
+	text-align: center;
+	padding: 45px 0 45px 0;
+}
+#exit>span>h1{
+	padding: 0;
+	margin: 0;
+}
+
+.avoid-clicks {
+  /*pointer-events: none;*/
+}
+
+.container {
+margin: 0 auto;
+}
+ .wrapper{
+  margin: 1% auto;
+ }
+
+div.titleheader{
+    max-width: 480px;
+	max-height: 50px;
+	text-align: center;
+}
+
+div.title{
+	display: inline-block;
+}
+div.basicFunctions{
+    max-width: 480px;
+	max-height: 150px;
+	display: inline-block;
+}
+
+div.advancedFunctions{
+    max-width: 480px;
+	max-height: 150px;
+	display: inline-block;
+}
+
+div.feedback{
+	height: 0px;
+	text-align: center;
+	color: #08426B;
+}
+
+div.footer{
+    max-height: 50px;
+    max-width: 480px;
+	min-width: 400px;
+}
+
+div.function{
+	max-height: 150px;
+	align: center;
+}
+
+.titleheader_pic{
+	max-height: 80px;
+	display: inline;
+}
+
+.titleheader_pic_small{
+	max-height: 30px;
+	display: inline;
+}
+
+.titleheader_pic_left{
+	float: left;
+}
+.titleheader_pic_right{
+	float: right;
+}
+
+.adv_img{
+	max-height: 95px;
+}
+
+.basic_img{
+	max-height: 95px;
+}
+
+.footer_small{
+	/*max-width: 30px;*/
+	max-height: 38px;
+	display: inline;
+	vertical-align: 
+}
+
+.footer_big{
+	/*max-width: 100px;*/
+	max-height: 38px;
+	display: inline;
+}
+
+.function_left{
+	float: left;
+	max-height: 85px;
+	display: table;
+	padding-top: 8px;
+	padding-right: 10px;
+}
+.function_right{
+	float: right;
+	max-height: 95px;
+	display: table;
+	padding-top: 8px;	
+}

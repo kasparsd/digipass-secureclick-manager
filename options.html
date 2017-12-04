@@ -1,0 +1,20 @@
+<html>
+<head><title>DIGIPASS SecureClick manager options</title></head>
+<body>
+
+Timeout between 5 and 30 seconds:
+<form>
+  <input type="number" name="timeout" id="timeout" min="5" max="30">
+</form>
+
+<select id="mode">
+ <option value="ble">Without Bluetooth Bridge(only Windows 10)</option>
+ <option value="bb">With USB Bluetooth Bridge</option>
+</select>
+
+<div id="status"></div>
+<button id="save">Save</button>
+
+<!--<script src="options.js"></script>-->
+</body>
+</html>
